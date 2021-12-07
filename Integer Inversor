@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int inverter(int n){
+	int m;
+	
+	if(n>=0 && n<10){
+		printf("%d", n);
+		return 0;
+	}
+	else
+	{
+		m = n % 10;
+		n /= 10;
+		printf("%d", m);
+		return inverter(n);
+	}		
+}
+
+int main(void){
+	
+	int n;
+	scanf("%d",&n);
+	inverter(n);
+	
+  return 0;
+}
