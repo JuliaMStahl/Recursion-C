@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int inverter(int n){
+int invert(int n){
 	int m;
 	
 	if(n>=0 && n<10){
@@ -12,7 +12,7 @@ int inverter(int n){
 		m = n % 10;
 		n /= 10;
 		printf("%d", m);
-		return inverter(n);
+		return invert(n);
 	}		
 }
 
@@ -20,7 +20,7 @@ int main(void){
 	
 	int n;
 	scanf("%d",&n);
-	inverter(n);
+	invert(n);
 	
   return 0;
 }
