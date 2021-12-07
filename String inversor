@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+char string[100];
+
+void invert(int n){
+    int tam;
+    tam = strlen(string) - 1;
+    
+    if(string[n] != '\0'){
+        printf("%c", string[tam-n]);
+        n++;
+        return invert(n);
+    }
+}
+
+int main(void){
+	scanf("%s", string);
+	invert(0);
+  
+  return 0;
+}
